@@ -11,8 +11,11 @@ config.initial_cols = 120
 config.initial_rows = 28
 
 -- or, changing the font size and color scheme.
-config.font_size = 10
-config.color_scheme = "AdventureTime"
+config.font_size = 12
+config.color_scheme = "tokyonight"
+
+-- Make the background see-thorugh and a bit blurry
+config.window_background_opacity = 1
 
 -- Finally, return the configuration to wezterm:
 return config
