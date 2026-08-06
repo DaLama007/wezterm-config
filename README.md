@@ -8,4 +8,3 @@
 
 
 Now all the changes should be visible
-```
