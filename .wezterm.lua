@@ -66,5 +66,15 @@ config.colors = {
 
 config.window_background_opacity = 1
 
+-- configure some key combinations for speed
+config.keys = {
+	-- allow quit return out of folder
+	{
+		key = "b",
+		mods = "CTRL",
+		action = wezterm.action.SendString("cd ..\r"),
+	},
+}
+
 -- Finally, return the configuration to wezterm:
 return config
