@@ -18,7 +18,7 @@ config.font_size = 12
 config.background = {
 	{
 		source = {
-			File = "C:\\Users\\yourname\\Desktop\\wezterm-config\\blackhole.png",
+			File = "C:\\Users\\Marwan\\Desktop\\wezterm-config\\blackhole.png",
 		},
 		width = "1920px", -- fixed pixel size instead of "100%"
 		height = "1080px",
@@ -73,6 +73,15 @@ config.keys = {
 		key = "b",
 		mods = "CTRL",
 		action = wezterm.action.SendString("cd ..\r"),
+	},
+	{
+		key = "w",
+		mods = "CTRL",
+		action = wezterm.action.Multiple({
+			wezterm.action.SendString("cd "),
+			wezterm.action.SendKey({ key = "Tab" }),
+			wezterm.action.SendString("\r"),
+		}),
 	},
 }
 
