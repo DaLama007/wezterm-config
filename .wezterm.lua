@@ -1,12 +1,11 @@
 -- Pull in the wezterm API
 local wezterm = require("wezterm")
+-- set var for cleaner code
+local act = wezterm.action
 
--- This will hold the configuration.
+-- Hold configuration.
 local config = wezterm.config_builder()
 
--- This is where you actually apply your config choices.
-
--- For example, changing the initial geometry for new windows:
 config.initial_cols = 120
 config.initial_rows = 28
 
@@ -77,10 +76,12 @@ config.keys = {
 	{
 		key = "w",
 		mods = "CTRL",
-		action = wezterm.action.Multiple({
-			wezterm.action.SendString("cd "),
-			wezterm.action.SendKey({ key = "Tab" }),
-			wezterm.action.SendString("\r"),
+		action = act.Multiple({
+			act.SendKey({ key = "c" }),
+			act.SendKey({ key = "d" }),
+			act.SendKey({ key = " " }),
+			act.SendKey({ key = "Tab" }),
+			act.SendKey({ key = "Enter" }),
 		}),
 	},
 }
